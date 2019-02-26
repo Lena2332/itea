@@ -1,6 +1,22 @@
 #!/usr/bin/env php
 <?php
+namespace App;
+namespace Test;
+
+use App;
+use Test;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
+$person = new Test\Person('Lena', 'Kupriiets');
 
+//You can use json, Yml, Xml
+$serializer = new App\Serializer('Xml');
+
+$serializedPerson = $serializer->serialize($person);
+
+var_dump($serializedPerson);
+
+$unserialize_object = $serializer->unserialize($serializedPerson);
+
+var_dump($unserialize_object);

@@ -1,4 +1,5 @@
-<?php namespace App;
+<?php
+namespace App;
 
 class JsonSerializer{
 

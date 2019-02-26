@@ -1,4 +1,5 @@
-<?php namespace App;
+<?php
+namespace Test;
 
 class Person{
 

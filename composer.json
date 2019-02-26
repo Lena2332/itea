@@ -1,5 +1,5 @@
 {
-  "name": "lena2332/serializer2",
+  "name": "lena2332/serializer",
   "description": "This is a serializer tool for object used Json, Xml, Yaml",
   "keywords": ["serializer", "object", "xml", "json", "yaml"],
   "type": "",
@@ -21,7 +21,8 @@
   },
   "autoload": {
     "psr-4": {
-      "App\\": "src/"
+      "App\\": "src/",
+      "Test\\": "tests/"
     }
   },
   "autoload-dev": {

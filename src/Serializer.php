@@ -1,19 +1,23 @@
-<?php namespace App;
+<?php
+namespace App;
 
 class Serializer{
     private $engine;
     private $serialized_string;
     private $obj;
+    const YAML_EN = 'Yml';
+    const XML_EN = 'Xml';
+    const JSON_EN = 'json';
 
     public function __construct($engine)
     {
-        if($engine == "json"){
+        if($engine == self::JSON_EN){
             $this->engine = new JsonSerializer();
         }
-        if($engine == "Xml") {
+        if($engine == self::XML_EN) {
             $this->engine = new XmlSerializer();
         }
-        if($engine == "Yml"){
+        if($engine == self::YAML_EN){
             $this->engine = new YmlSerializer();
         }
     }
